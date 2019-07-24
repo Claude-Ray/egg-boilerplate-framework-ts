@@ -1,0 +1,55 @@
+{
+  "name": "egg-boilerplate-framework-ts",
+  "version": "1.0.0",
+  "description": "Boilerplate for egg typescript framework",
+  "private": true,
+  "egg": {
+    "typescript": true,
+    "declarations": true
+  },
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "npm run tsc && egg-bin test",
+    "cov": "egg-bin cov",
+    "tsc": "rm -rf dist && ets && tsc -p tsconfig.json && cpy package.json dist",
+    "ci": "npm run lint && npm run cov && npm run tsc",
+    "autod": "autod",
+    "lint": "tslint --project . -c tslint.json",
+    "clean": "ets clean"
+  },
+  "ci": {
+    "version": "8, 10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Claude-Ray/egg-boilerplate-framework-ts.git"
+  },
+  "keywords": [
+    "egg",
+    "egg-framework"
+  ],
+  "author": "claude-ray",
+  "dependencies": {
+    "egg": "^2.23.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.6.8",
+    "@types/supertest": "^2.0.8",
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "cpy-cli": "^2.0.0",
+    "egg-bin": "^4.13.0",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.16.0",
+    "tslib": "^1.9.0",
+    "tslint": "^5.0.0",
+    "tslint-config-egg": "^1.0.0",
+    "typescript": "^3.0.0"
+  },
+  "license": "MIT"
+}
