@@ -16,7 +16,7 @@
     "test-local": "npm run tsc && egg-bin test",
     "cov": "egg-bin cov",
     "tsc": "rm -rf dist && ets && tsc -p tsconfig.json && cpy package.json dist",
-    "ci": "npm run lint && npm run cov && npm run tsc",
+    "ci": "npm run lint && npm run tsc && npm run cov",
     "autod": "autod",
     "lint": "tslint --project . -c tslint.json",
     "clean": "ets clean"
