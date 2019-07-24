@@ -1,4 +1,5 @@
 # egg-boilerplate-framework-ts
+[![Build Status](https://travis-ci.org/Claude-Ray/egg-boilerplate-framework-ts.svg?branch=master)](https://travis-ci.org/Claude-Ray/egg-boilerplate-framework-ts)
 
 Boilerplate for egg typescript framework.
 
