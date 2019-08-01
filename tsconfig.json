@@ -21,6 +21,7 @@
     "skipDefaultLibCheck": true,
     "inlineSourceMap": true,
     "importHelpers": true,
+		"declaration": true,
     "outDir": "dist"
   },
   "exclude": [
