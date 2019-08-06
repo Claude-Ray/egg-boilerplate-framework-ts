@@ -8,16 +8,20 @@
     "declarations": true
   },
   "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "typings": "index.d.ts",
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
   "engines": {
     "node": ">=8.0.0"
   },
   "scripts": {
     "test": "npm run lint -- --fix && npm run test-local",
-    "test-local": "npm run tsc && egg-bin test",
+    "test-local": "egg-bin test",
     "cov": "egg-bin cov",
     "tsc": "rimraf dist && ets && tsc -p tsconfig.json",
-    "ci": "npm run lint && npm run tsc && npm run cov",
+    "ci": "npm run lint && npm run cov && npm run tsc",
     "autod": "autod",
     "lint": "tslint --project . -c tslint.json",
     "clean": "ets clean"
