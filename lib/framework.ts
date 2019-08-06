@@ -9,8 +9,8 @@ export class Application extends egg.Application {
   get [EGG_PATH]() {
     return path.dirname(__dirname);
   }
-  get framework() {
-    return '';
+  get pkgName() {
+    return this.name;
   }
 }
 

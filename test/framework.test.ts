@@ -1,5 +1,6 @@
 'use strict';
 
+import assert from 'assert';
 import { mock } from 'egg-mock/bootstrap';
 
 describe('test/framework.test.ts', () => {
@@ -28,5 +29,9 @@ describe('test/framework.test.ts', () => {
       .get('/date')
       .expect(new Date().toDateString())
       .expect(200);
+  });
+
+  it('should have pkgName', () => {
+    assert.equal(app.pkgName, app.name);
   });
 });
