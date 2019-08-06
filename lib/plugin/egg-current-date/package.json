@@ -1,0 +1,8 @@
+{
+  "name": "egg-current-date",
+  "version": "0.0.1",
+  "description": "plugin demo for egg framework",
+  "eggPlugin": {
+    "name": "currentDate"
+  }
+}

@@ -22,4 +22,11 @@ describe('test/framework.test.ts', () => {
       .expect('framework-ts-example_123456')
       .expect(200);
   });
+
+  it('should GET /date', () => {
+    return app.httpRequest()
+      .get('/date')
+      .expect(new Date().toDateString())
+      .expect(200);
+  });
 });
